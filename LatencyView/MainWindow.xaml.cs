@@ -68,7 +68,7 @@ namespace Wpf.CartesianChart.MaterialCards
                     Application.Current.Dispatcher.Invoke(() =>
                     {
                         System.Net.NetworkInformation.Ping p = new System.Net.NetworkInformation.Ping();
-                        System.Net.NetworkInformation.PingReply reply = p.Send("yahoo.co.jp");
+                        System.Net.NetworkInformation.PingReply reply = p.Send("localost");
                         if (reply.Status == System.Net.NetworkInformation.IPStatus.Success)
                         {
                             LastSeries[0].Values.Add(new ObservableValue(reply.RoundtripTime));
